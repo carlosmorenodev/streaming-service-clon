@@ -62,7 +62,9 @@ const MoviesCarrousel = () => {
                     {movies.map((movie) => (
                         <img
                             key={movie.id}
-                            className='thumbnail'
+                            className={`thumbnail ${
+                                currentMovie.id === movie.id ? 'active' : ''
+                            }`}
                             src={movie.src1}
                             alt={movie.alt}
                             onClick={() => handleClickThumbnail(movie)} />
