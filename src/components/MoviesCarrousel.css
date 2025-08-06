@@ -1,6 +1,7 @@
 .movies-carrousel {
     width: 70%;
     margin: auto;
+    padding: 100px 20px;
 }
 
 .main-movie {
@@ -18,11 +19,15 @@
 
 .thumbsnails-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-top: 10px;
 }
 
 .thumbnail {
     width: 90px;
     cursor: pointer;
+    transition: .4s;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
