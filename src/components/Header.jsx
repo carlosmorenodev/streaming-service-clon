@@ -7,6 +7,7 @@ const Header = () => {
     <>
     <header>
         <div className="logo">CinemaPlus</div>
+        <div className="login">Iniciar sesión</div>
     </header>
     </>
   )

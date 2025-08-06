@@ -1,20 +1,40 @@
 .movies-carrousel {
-    width: 70%;
-    margin: auto;
-    padding: 100px 20px;
+    /*  width: 70%;
+    margin: auto; */
+    /* padding: 100px 20px; */
+
 }
 
 .main-movie {
-    display: flex;
-    gap: 20px;
-    width: 100%; 
+    /* display: flex;
+    gap: 20px; */
+    width: 80%;
     height: auto;
-    background-color: red;   
+    background-color: red;
+}
+
+.movie-logo {
+    position: absolute;
+    top: 30%;
+    left: 100px;
+    width: 350px;
 }
 
 .movie-poster {
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
+}
+
+.movie-data {
+    position: absolute;
+    top: 53%;
+    left: 100px;
+}
+
+.synopsis {
+    font-size: 18px; 
+    color: #c0c0c0;
+    width: 600px;
 }
 
 .thumbsnails-container {
@@ -27,6 +47,7 @@
     width: 90px;
     cursor: pointer;
     transition: .4s;
+
     &:hover {
         transform: scale(1.1);
     }

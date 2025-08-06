@@ -21,6 +21,8 @@ import Starwars62 from '../images/starwars62.webp'
 
 import Starwars71 from '../images/starwars71.jpg'
 import Starwars72 from '../images/starwars72.webp'
+import Starwars7wallpaper from '../images/starwars7wallpaper.webp'
+import Starwars7logo from '../images/starwars7logo.webp'
 
 import Starwars81 from '../images/starwars81.jpg'
 import Starwars82 from '../images/starwars82.webp'
@@ -32,15 +34,15 @@ const MoviesCarrousel = () => {
 
 
     const movies = [
-        { id: 1, src1: Starwars11, src2: Starwars12, alt: 'La amenaza fantasma'  },
-        { id: 2, src1: Starwars21, src2: Starwars22, alt: 'El ataque de los clones'  },
-        { id: 3, src1: Starwars31, src2: Starwars32, alt: 'La venganza de los sith'  },
-        { id: 4, src1: Starwars41, src2: Starwars42, alt: 'Una nueva esperanza'  },
-        { id: 5, src1: Starwars51, src2: Starwars52, alt: 'El imperio contraataca'  },
-        { id: 6, src1: Starwars61, src2: Starwars62, alt: 'El retorno del Jedi'  },
-        { id: 7, src1: Starwars71, src2: Starwars72, alt: 'El despertar de la fuerza'  },
-        { id: 8, src1: Starwars81, src2: Starwars82, alt: 'El último Jedi'  },
-        { id: 9, src1: Starwars91, src2: Starwars92, alt: 'El ascenso de Skywalker'  },
+        { id: 1, src1: Starwars11, src2: Starwars12, alt: 'La amenaza fantasma' },
+        { id: 2, src1: Starwars21, src2: Starwars22, alt: 'El ataque de los clones' },
+        { id: 3, src1: Starwars31, src2: Starwars32, alt: 'La venganza de los sith' },
+        { id: 4, src1: Starwars41, src2: Starwars42, alt: 'Una nueva esperanza' },
+        { id: 5, src1: Starwars51, src2: Starwars52, alt: 'El imperio contraataca' },
+        { id: 6, src1: Starwars61, src2: Starwars62, alt: 'El retorno del Jedi' },
+        { id: 7, src1: Starwars71, src2: Starwars72, wallpaper: Starwars7wallpaper, logo: Starwars7logo, sinopsis: 'Rey y Finn se unen a Han Solo y Chewbacca para buscar la única esperanza de restaurar la paz. Vive el acontecimiento cinematográfico de una generación en Star Wars: El despertar de la fuerza.', alt: 'El despertar de la fuerza' },
+        { id: 8, src1: Starwars81, src2: Starwars82, alt: 'El último Jedi' },
+        { id: 9, src1: Starwars91, src2: Starwars92, alt: 'El ascenso de Skywalker' },
     ]
 
     const [currentMovie, setCurrentMovie] = useState(movies[1])
@@ -52,19 +54,23 @@ const MoviesCarrousel = () => {
     return (
         <>
             <div className="movies-carrousel">
+                <img className='movie-wallpaper' src={currentMovie.wallpaper} alt={currentMovie.alt} />
                 <div className="main-movie">
-                    <img className='movie-poster' src={currentMovie.src2} alt="" />
+                    {/* <img className='movie-poster' src={currentMovie.src2} alt="" /> */}
                     {/* <div className="movie-data">
                         <h2>{currentMovie.title}</h2>
                     </div> */}
+                    <img src={currentMovie.logo} alt={currentMovie.alt} className="movie-logo" />
+                    <div className="movie-data">
+                        <div className="synopsis">{currentMovie.sinopsis}</div>
+                    </div>
                 </div>
                 <div className="thumbsnails-container">
                     {movies.map((movie) => (
                         <img
                             key={movie.id}
-                            className={`thumbnail ${
-                                currentMovie.id === movie.id ? 'active' : ''
-                            }`}
+                            className={`thumbnail ${currentMovie.id === movie.id ? 'active' : ''
+                                }`}
                             src={movie.src1}
                             alt={movie.alt}
                             onClick={() => handleClickThumbnail(movie)} />

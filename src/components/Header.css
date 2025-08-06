@@ -1,13 +1,33 @@
 header {
-    background-color: black;
-    padding: 30px 20px;
+    /* background-color: black; */
+    padding: 20px 20px;
     width: 100%;
     position: fixed;
     top:0;
     left:0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     color: red;
     text-transform: uppercase;
+}
+
+.login {
+    border: solid 1px white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: black;
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+        color: black;
+        background-color: white;
+    }
 }
