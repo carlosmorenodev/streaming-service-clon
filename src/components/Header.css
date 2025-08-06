@@ -1,0 +1,9 @@
+header {
+    background-color: black;
+    padding: 30px 20px;
+}
+
+.logo {
+    color: red;
+    text-transform: uppercase;
+}
